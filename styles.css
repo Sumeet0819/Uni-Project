@@ -800,23 +800,47 @@ body {
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
 }
-
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1024px) { /* iPad Screens */
+  .hero-slider {
+    width: 100%;
+    position: static;
+    background: #1a2d59cc;
+    padding: 40px 20px;
   }
 
-  .stat-item:nth-child(2)::after {
-    display: none;
+  .hero-slider h1 {
+    font-size: 2rem;
+  }
+
+  .hero-slider p {
+    font-size: 1.1rem;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) { /* Tablets */
+  .top-bar,
+  .logo-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar {
+    display: none; /* Hide navbar for smaller screens */
   }
 
   .hero-slider {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateY(0);
-    background: #1a2d59cc;
+    text-align: center;
+    padding: 20px;
   }
 
   .hero-slider h1 {
@@ -827,24 +851,6 @@ body {
     font-size: 1rem;
   }
 
-  .navbar {
-    display: none;
-  }
-
-  .logo-nav {
-    justify-content: center;
-  }
-
-  .logo img {
-    width: 120px;
-  }
-}
-
-@media (max-width: 576px) {
-  .navbar {
-    display: block;
-  }
-
   .image-gallery {
     flex-direction: column;
     gap: 20px;
@@ -853,6 +859,7 @@ body {
   .text-content {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .text-content p {
@@ -861,13 +868,56 @@ body {
 
   .connect-section {
     flex-direction: column;
+    gap: 20px;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
   }
+}
 
-  .courses-grid {
+@media (max-width: 576px) { /* Mobile Screens */
+  .top-bar,
+  .logo-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar {
+    display: none; /* Hide navbar for mobile */
+  }
+
+  .hero-slider {
+    width: 100%;
+    padding: 20px;
+    background: #1a2d59cc;
+  }
+
+  .hero-slider h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-slider p {
+    font-size: 0.9rem;
+  }
+
+  .image-gallery {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .text-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-content p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .footer-content {
     grid-template-columns: 1fr;
   }
 
