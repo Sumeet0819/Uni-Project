@@ -265,7 +265,56 @@ body {
   font-size: 14px;
   color: #666;
 }
+.nav-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end; 
+  margin-left: 800px; 
+  width: 100%;
 
+}
+
+.nav-button {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-button.prev {
+  background-color: white;
+  color: #666;
+}
+
+.nav-button.next {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+}
+
+.nav-button:hover {
+  opacity: 0.9;
+}
+
+.arrow {
+  border: solid currentColor;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow-left {
+  transform: rotate(135deg);
+}
+
+.arrow-right {
+  transform: rotate(-45deg);
+}
 .pagination {
   display: flex;
   justify-content: center;
@@ -285,6 +334,8 @@ body {
 .pagination div.active {
   background: #1a2d59;
 }
+
+
 .connect-section {
   max-width: 1200px;
   margin: 40px auto;
