@@ -801,14 +801,77 @@ body {
   font-size: 14px;
 }
 
-@media (max-width: 992px) {
-  .footer-content {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stat-item:nth-child(2)::after {
+    display: none;
+  }
+
+  .hero-slider {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(0);
+    background: #1a2d59cc;
+  }
+
+  .hero-slider h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-slider p {
+    font-size: 1rem;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .logo-nav {
+    justify-content: center;
+  }
+
+  .logo img {
+    width: 120px;
   }
 }
 
 @media (max-width: 576px) {
+  .navbar {
+    display: block;
+  }
+
+  .image-gallery {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content p {
+    width: 100%;
+  }
+
+  .connect-section {
+    flex-direction: column;
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-logo img {
+    height: 30px;
   }
 }
